@@ -1,0 +1,35 @@
+EAPasscodeLock
+
+# Description
+This library for iOS provides a simple way to implement a passcode lock screen. It can be used on iPod Touch, iPhone and iPad.
+
+
+
+# Implementation
+	1) Copy the following files into your project
+		EAPasscodeLockProtocol.h
+		EAPasscodeLock.h
+		libEAPasscodeLock.a
+		PasscodeResources.bundle
+
+	2) Config "Library Search Paths" into Targets' Build Settings with a reference to the directory where libEAPasscodeLoc.a is present
+
+	3) Under Build Phases -> Copy Bundle Resources, ensure PasscodeResources.bundle is there
+
+	4) Add this two imports to your code
+		#import "EAPasscodeLock.h"
+		#import "EAPasscodeLockProtocol.h"
+
+	5) Perform a simple call that shows the lock screen
+
+	        EAPasscodeLock* passcodeManager = [[EAPasscodeLock alloc] init];
+        	UIViewController* plViewController = [passcodeManager passcodeViewControllerWithCode:@"1234" cancellable:YES hintText:@"Please enter a four digits number." maxRetries:4 delegate:self];
+        
+	        [self presentModalViewController:plViewController animated:NO];        
+
+	6) Implement the only obligatory method
+		-(void)passcodeDidUnlockedSuccessfully;
+
+	7) Your are done!
+	
+

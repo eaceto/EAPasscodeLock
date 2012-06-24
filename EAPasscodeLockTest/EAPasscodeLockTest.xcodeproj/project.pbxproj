@@ -19,7 +19,6 @@
 		3FD28450159556EE0017B628 /* EAViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FD2844F159556EE0017B628 /* EAViewController.m */; };
 		3FD28453159556EE0017B628 /* EAViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3FD28451159556EE0017B628 /* EAViewController_iPhone.xib */; };
 		3FD28456159556EE0017B628 /* EAViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3FD28454159556EE0017B628 /* EAViewController_iPad.xib */; };
-		3FE7968D159621FA0083E8C8 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FE7968C159621FA0083E8C8 /* QuartzCore.framework */; };
 		3FE796A61596274A0083E8C8 /* libEAPasscodeLock.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FE796A51596274A0083E8C8 /* libEAPasscodeLock.a */; };
 		3FE796A9159627A10083E8C8 /* PasscodeResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 3FE796A8159627A10083E8C8 /* PasscodeResources.bundle */; };
 /* End PBXBuildFile section */
@@ -45,7 +44,6 @@
 		3FD2844F159556EE0017B628 /* EAViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EAViewController.m; sourceTree = "<group>"; };
 		3FD28452159556EE0017B628 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/EAViewController_iPhone.xib; sourceTree = "<group>"; };
 		3FD28455159556EE0017B628 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/EAViewController_iPad.xib; sourceTree = "<group>"; };
-		3FE7968C159621FA0083E8C8 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		3FE796A51596274A0083E8C8 /* libEAPasscodeLock.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libEAPasscodeLock.a; path = "../../../../../../Library/Developer/Xcode/DerivedData/EAPasscodeLock-gteaoguqkzmnahfevjglnpmuodtv/Build/Products/Debug-iphoneos/libEAPasscodeLock.a"; sourceTree = "<group>"; };
 		3FE796A8159627A10083E8C8 /* PasscodeResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = PasscodeResources.bundle; path = ../EAPasscodeLock/distribution/PasscodeResources.bundle; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -56,7 +54,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				3FE796A61596274A0083E8C8 /* libEAPasscodeLock.a in Frameworks */,
-				3FE7968D159621FA0083E8C8 /* QuartzCore.framework in Frameworks */,
 				3FD2843D159556EE0017B628 /* UIKit.framework in Frameworks */,
 				3FD2843F159556EE0017B628 /* Foundation.framework in Frameworks */,
 				3FD28441159556EE0017B628 /* CoreGraphics.framework in Frameworks */,
@@ -87,7 +84,6 @@
 		3FD2843B159556EE0017B628 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				3FE7968C159621FA0083E8C8 /* QuartzCore.framework */,
 				3FD2843C159556EE0017B628 /* UIKit.framework */,
 				3FD2843E159556EE0017B628 /* Foundation.framework */,
 				3FD28440159556EE0017B628 /* CoreGraphics.framework */,
