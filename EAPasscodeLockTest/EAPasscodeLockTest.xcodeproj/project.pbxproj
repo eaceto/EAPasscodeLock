@@ -1,0 +1,334 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3FD2843D159556EE0017B628 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FD2843C159556EE0017B628 /* UIKit.framework */; };
+		3FD2843F159556EE0017B628 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FD2843E159556EE0017B628 /* Foundation.framework */; };
+		3FD28441159556EE0017B628 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FD28440159556EE0017B628 /* CoreGraphics.framework */; };
+		3FD28447159556EE0017B628 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3FD28445159556EE0017B628 /* InfoPlist.strings */; };
+		3FD28449159556EE0017B628 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FD28448159556EE0017B628 /* main.m */; };
+		3FD2844D159556EE0017B628 /* EAAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FD2844C159556EE0017B628 /* EAAppDelegate.m */; };
+		3FD28450159556EE0017B628 /* EAViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FD2844F159556EE0017B628 /* EAViewController.m */; };
+		3FD28453159556EE0017B628 /* EAViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3FD28451159556EE0017B628 /* EAViewController_iPhone.xib */; };
+		3FD28456159556EE0017B628 /* EAViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3FD28454159556EE0017B628 /* EAViewController_iPad.xib */; };
+		3FE7968D159621FA0083E8C8 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FE7968C159621FA0083E8C8 /* QuartzCore.framework */; };
+		3FE796A61596274A0083E8C8 /* libEAPasscodeLock.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FE796A51596274A0083E8C8 /* libEAPasscodeLock.a */; };
+		3FE796A9159627A10083E8C8 /* PasscodeResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 3FE796A8159627A10083E8C8 /* PasscodeResources.bundle */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		3F6D3745159663AB003D62C7 /* EAPasscodeLock.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = EAPasscodeLock.h; path = ../EAPasscodeLock/EAPasscodeLock/EAPasscodeLock.h; sourceTree = "<group>"; };
+		3F6D374915966AD7003D62C7 /* EAPasscodeLockProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EAPasscodeLockProtocol.h; path = ../EAPasscodeLock/EAPasscodeLock/EAPasscodeLockProtocol.h; sourceTree = "<group>"; };
+		3FD28438159556EE0017B628 /* EAPasscodeLockTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EAPasscodeLockTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3FD2843C159556EE0017B628 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		3FD2843E159556EE0017B628 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		3FD28440159556EE0017B628 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		3FD28444159556EE0017B628 /* EAPasscodeLockTest-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "EAPasscodeLockTest-Info.plist"; sourceTree = "<group>"; };
+		3FD28446159556EE0017B628 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		3FD28448159556EE0017B628 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		3FD2844A159556EE0017B628 /* EAPasscodeLockTest-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "EAPasscodeLockTest-Prefix.pch"; sourceTree = "<group>"; };
+		3FD2844B159556EE0017B628 /* EAAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EAAppDelegate.h; sourceTree = "<group>"; };
+		3FD2844C159556EE0017B628 /* EAAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EAAppDelegate.m; sourceTree = "<group>"; };
+		3FD2844E159556EE0017B628 /* EAViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EAViewController.h; sourceTree = "<group>"; };
+		3FD2844F159556EE0017B628 /* EAViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EAViewController.m; sourceTree = "<group>"; };
+		3FD28452159556EE0017B628 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/EAViewController_iPhone.xib; sourceTree = "<group>"; };
+		3FD28455159556EE0017B628 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/EAViewController_iPad.xib; sourceTree = "<group>"; };
+		3FE7968C159621FA0083E8C8 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		3FE796A51596274A0083E8C8 /* libEAPasscodeLock.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libEAPasscodeLock.a; path = "../../../../../../Library/Developer/Xcode/DerivedData/EAPasscodeLock-gteaoguqkzmnahfevjglnpmuodtv/Build/Products/Debug-iphoneos/libEAPasscodeLock.a"; sourceTree = "<group>"; };
+		3FE796A8159627A10083E8C8 /* PasscodeResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = PasscodeResources.bundle; path = ../EAPasscodeLock/distribution/PasscodeResources.bundle; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3FD28435159556EE0017B628 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3FE796A61596274A0083E8C8 /* libEAPasscodeLock.a in Frameworks */,
+				3FE7968D159621FA0083E8C8 /* QuartzCore.framework in Frameworks */,
+				3FD2843D159556EE0017B628 /* UIKit.framework in Frameworks */,
+				3FD2843F159556EE0017B628 /* Foundation.framework in Frameworks */,
+				3FD28441159556EE0017B628 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3FD2842D159556EE0017B628 = {
+			isa = PBXGroup;
+			children = (
+				3FE7968615961B7C0083E8C8 /* PasscodeLib */,
+				3FD28442159556EE0017B628 /* EAPasscodeLockTest */,
+				3FD2843B159556EE0017B628 /* Frameworks */,
+				3FD28439159556EE0017B628 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		3FD28439159556EE0017B628 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3FD28438159556EE0017B628 /* EAPasscodeLockTest.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3FD2843B159556EE0017B628 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3FE7968C159621FA0083E8C8 /* QuartzCore.framework */,
+				3FD2843C159556EE0017B628 /* UIKit.framework */,
+				3FD2843E159556EE0017B628 /* Foundation.framework */,
+				3FD28440159556EE0017B628 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3FD28442159556EE0017B628 /* EAPasscodeLockTest */ = {
+			isa = PBXGroup;
+			children = (
+				3FD2844B159556EE0017B628 /* EAAppDelegate.h */,
+				3FD2844C159556EE0017B628 /* EAAppDelegate.m */,
+				3FD2844E159556EE0017B628 /* EAViewController.h */,
+				3FD2844F159556EE0017B628 /* EAViewController.m */,
+				3FD28451159556EE0017B628 /* EAViewController_iPhone.xib */,
+				3FD28454159556EE0017B628 /* EAViewController_iPad.xib */,
+				3FD28443159556EE0017B628 /* Supporting Files */,
+			);
+			path = EAPasscodeLockTest;
+			sourceTree = "<group>";
+		};
+		3FD28443159556EE0017B628 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				3FD28444159556EE0017B628 /* EAPasscodeLockTest-Info.plist */,
+				3FD28445159556EE0017B628 /* InfoPlist.strings */,
+				3FD28448159556EE0017B628 /* main.m */,
+				3FD2844A159556EE0017B628 /* EAPasscodeLockTest-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		3FE7968615961B7C0083E8C8 /* PasscodeLib */ = {
+			isa = PBXGroup;
+			children = (
+				3F6D374915966AD7003D62C7 /* EAPasscodeLockProtocol.h */,
+				3F6D3745159663AB003D62C7 /* EAPasscodeLock.h */,
+				3FE796A8159627A10083E8C8 /* PasscodeResources.bundle */,
+				3FE796A51596274A0083E8C8 /* libEAPasscodeLock.a */,
+			);
+			name = PasscodeLib;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3FD28437159556EE0017B628 /* EAPasscodeLockTest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3FD28459159556EE0017B628 /* Build configuration list for PBXNativeTarget "EAPasscodeLockTest" */;
+			buildPhases = (
+				3FD28434159556EE0017B628 /* Sources */,
+				3FD28435159556EE0017B628 /* Frameworks */,
+				3FD28436159556EE0017B628 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = EAPasscodeLockTest;
+			productName = EAPasscodeLockTest;
+			productReference = 3FD28438159556EE0017B628 /* EAPasscodeLockTest.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3FD2842F159556EE0017B628 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = EA;
+				LastUpgradeCheck = 0430;
+				ORGANIZATIONNAME = Xenat;
+			};
+			buildConfigurationList = 3FD28432159556EE0017B628 /* Build configuration list for PBXProject "EAPasscodeLockTest" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 3FD2842D159556EE0017B628;
+			productRefGroup = 3FD28439159556EE0017B628 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3FD28437159556EE0017B628 /* EAPasscodeLockTest */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3FD28436159556EE0017B628 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3FD28447159556EE0017B628 /* InfoPlist.strings in Resources */,
+				3FD28453159556EE0017B628 /* EAViewController_iPhone.xib in Resources */,
+				3FD28456159556EE0017B628 /* EAViewController_iPad.xib in Resources */,
+				3FE796A9159627A10083E8C8 /* PasscodeResources.bundle in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3FD28434159556EE0017B628 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3FD28449159556EE0017B628 /* main.m in Sources */,
+				3FD2844D159556EE0017B628 /* EAAppDelegate.m in Sources */,
+				3FD28450159556EE0017B628 /* EAViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		3FD28445159556EE0017B628 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3FD28446159556EE0017B628 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		3FD28451159556EE0017B628 /* EAViewController_iPhone.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3FD28452159556EE0017B628 /* en */,
+			);
+			name = EAViewController_iPhone.xib;
+			sourceTree = "<group>";
+		};
+		3FD28454159556EE0017B628 /* EAViewController_iPad.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3FD28455159556EE0017B628 /* en */,
+			);
+			name = EAViewController_iPad.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3FD28457159556EE0017B628 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		3FD28458159556EE0017B628 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3FD2845A159556EE0017B628 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "EAPasscodeLockTest/EAPasscodeLockTest-Prefix.pch";
+				INFOPLIST_FILE = "EAPasscodeLockTest/EAPasscodeLockTest-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"../EAPasscodeLock/Distribution/**",
+					"\"$(SRCROOT)\"",
+					"\"$(SRCROOT)/../../../../../../Library/Developer/Xcode/DerivedData/EAPasscodeLock-gteaoguqkzmnahfevjglnpmuodtv/Build/Products/Debug-iphoneos\"",
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		3FD2845B159556EE0017B628 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "EAPasscodeLockTest/EAPasscodeLockTest-Prefix.pch";
+				INFOPLIST_FILE = "EAPasscodeLockTest/EAPasscodeLockTest-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"../EAPasscodeLock/Distribution/**",
+					"\"$(SRCROOT)\"",
+					"\"$(SRCROOT)/../../../../../../Library/Developer/Xcode/DerivedData/EAPasscodeLock-gteaoguqkzmnahfevjglnpmuodtv/Build/Products/Debug-iphoneos\"",
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3FD28432159556EE0017B628 /* Build configuration list for PBXProject "EAPasscodeLockTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3FD28457159556EE0017B628 /* Debug */,
+				3FD28458159556EE0017B628 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3FD28459159556EE0017B628 /* Build configuration list for PBXNativeTarget "EAPasscodeLockTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3FD2845A159556EE0017B628 /* Debug */,
+				3FD2845B159556EE0017B628 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3FD2842F159556EE0017B628 /* Project object */;
+}
