@@ -9,9 +9,12 @@
 #import <UIKit/UIKit.h>
 #import "EAPasscodeLock.h"
 #import "EAPasscodeLockProtocol.h"
+#import "EAAccessGrantedViewController.h"
 
 @interface EAViewController : UIViewController <EAPasscodeLockProtocol>
 {
     BOOL unlocked;
 }
+-(IBAction)unlock:(id)sender;
+
 @end

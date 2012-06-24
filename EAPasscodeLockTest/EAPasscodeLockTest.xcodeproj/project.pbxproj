@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3FA7D7121597BBF700F4E295 /* EAAccessGrantedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FA7D7101597BBF700F4E295 /* EAAccessGrantedViewController.m */; };
+		3FA7D7131597BBF700F4E295 /* EAAccessGrantedViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3FA7D7111597BBF700F4E295 /* EAAccessGrantedViewController_iPhone.xib */; };
+		3FA7D7151597BC5D00F4E295 /* EAAccessGrantedViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3FA7D7141597BC5C00F4E295 /* EAAccessGrantedViewController_iPad.xib */; };
 		3FD2843D159556EE0017B628 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FD2843C159556EE0017B628 /* UIKit.framework */; };
 		3FD2843F159556EE0017B628 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FD2843E159556EE0017B628 /* Foundation.framework */; };
 		3FD28441159556EE0017B628 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FD28440159556EE0017B628 /* CoreGraphics.framework */; };
@@ -24,6 +27,10 @@
 /* Begin PBXFileReference section */
 		3F6D3745159663AB003D62C7 /* EAPasscodeLock.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = EAPasscodeLock.h; path = ../EAPasscodeLock/EAPasscodeLock/EAPasscodeLock.h; sourceTree = "<group>"; };
 		3F6D374915966AD7003D62C7 /* EAPasscodeLockProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EAPasscodeLockProtocol.h; path = ../EAPasscodeLock/EAPasscodeLock/EAPasscodeLockProtocol.h; sourceTree = "<group>"; };
+		3FA7D70F1597BBF700F4E295 /* EAAccessGrantedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EAAccessGrantedViewController.h; sourceTree = "<group>"; };
+		3FA7D7101597BBF700F4E295 /* EAAccessGrantedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EAAccessGrantedViewController.m; sourceTree = "<group>"; };
+		3FA7D7111597BBF700F4E295 /* EAAccessGrantedViewController_iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EAAccessGrantedViewController_iPhone.xib; sourceTree = "<group>"; };
+		3FA7D7141597BC5C00F4E295 /* EAAccessGrantedViewController_iPad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EAAccessGrantedViewController_iPad.xib; sourceTree = "<group>"; };
 		3FD28438159556EE0017B628 /* EAPasscodeLockTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EAPasscodeLockTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FD2843C159556EE0017B628 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		3FD2843E159556EE0017B628 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -98,6 +105,10 @@
 				3FD28451159556EE0017B628 /* EAViewController_iPhone.xib */,
 				3FD28454159556EE0017B628 /* EAViewController_iPad.xib */,
 				3FD28443159556EE0017B628 /* Supporting Files */,
+				3FA7D70F1597BBF700F4E295 /* EAAccessGrantedViewController.h */,
+				3FA7D7101597BBF700F4E295 /* EAAccessGrantedViewController.m */,
+				3FA7D7111597BBF700F4E295 /* EAAccessGrantedViewController_iPhone.xib */,
+				3FA7D7141597BC5C00F4E295 /* EAAccessGrantedViewController_iPad.xib */,
 			);
 			path = EAPasscodeLockTest;
 			sourceTree = "<group>";
@@ -180,6 +191,8 @@
 				3FD28453159556EE0017B628 /* EAViewController_iPhone.xib in Resources */,
 				3FD28456159556EE0017B628 /* EAViewController_iPad.xib in Resources */,
 				3FE796A9159627A10083E8C8 /* PasscodeResources.bundle in Resources */,
+				3FA7D7131597BBF700F4E295 /* EAAccessGrantedViewController_iPhone.xib in Resources */,
+				3FA7D7151597BC5D00F4E295 /* EAAccessGrantedViewController_iPad.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -193,6 +206,7 @@
 				3FD28449159556EE0017B628 /* main.m in Sources */,
 				3FD2844D159556EE0017B628 /* EAAppDelegate.m in Sources */,
 				3FD28450159556EE0017B628 /* EAViewController.m in Sources */,
+				3FA7D7121597BBF700F4E295 /* EAAccessGrantedViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -45,10 +45,15 @@
     
     id<EAPasscodeLockProtocol> passcodeDelegate; 
     
+    int tries;
     int maxRetries;
+    BOOL showHint;
+    BOOL showCancel;
     
     NSString* passcodeTitle;
+    NSString* hintText;
 }
+@property (nonatomic, retain) NSString* hintText;
 @property (nonatomic, retain) NSString* passcodeTitle;
 @property (nonatomic, retain) IBOutlet UIView* passcodeErrorBaseView;
 @property (nonatomic, retain) IBOutlet UILabel* passcodeErrorLabel;
@@ -85,7 +90,6 @@
 
 -(IBAction)keyPressed:(id)sender;
 
-- (void)setShowHints:(BOOL)hint;
 - (void)setMaxRetries:(int)retries;
 - (void)setCancellable:(BOOL)canCancel;
 

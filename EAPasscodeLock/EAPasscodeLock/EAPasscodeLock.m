@@ -13,9 +13,17 @@
 @implementation EAPasscodeLock
 
 
+-(UIViewController*) passcodeViewControllerWithCode:(NSString*)code delegate:(id<EAPasscodeLockProtocol>) _passcodeDelegate
+{
+    return [self passcodeViewControllerWithCode:code cancellable:YES hintText:nil maxRetries:0 delegate:_passcodeDelegate];
+}
 
+-(UIViewController*) passcodeViewControllerWithCode:(NSString*)code cancellable:(BOOL)cancellable delegate:(id<EAPasscodeLockProtocol>) _passcodeDelegate
+{
+    return [self passcodeViewControllerWithCode:code cancellable:cancellable hintText:nil maxRetries:0 delegate:_passcodeDelegate];    
+}
 
--(UIViewController*) passcodeViewControllerWithCode:(NSString*)code cancelable:(BOOL)cancelable showHint:(BOOL)hint maxRetries:(int)retries delegate:(id<EAPasscodeLockProtocol>) _passcodeDelegate
+-(UIViewController*) passcodeViewControllerWithCode:(NSString*)code cancellable:(BOOL)cancellable hintText:(NSString*)hintText  maxRetries:(int)retries delegate:(id<EAPasscodeLockProtocol>) _passcodeDelegate
 {
     EAPasscodeLockViewController* passcodeViewController = nil;        
     NSString *bundlePath = [[NSBundle mainBundle] pathForResource:@"PasscodeResources" ofType:@"bundle"];
@@ -35,8 +43,8 @@
     [passcodeViewController setUnlockCode:code];
     [passcodeViewController setPasscodeDelegate:_passcodeDelegate];
     [passcodeViewController setMaxRetries:retries];
-    [passcodeViewController setCancellable:cancelable];
-    [passcodeViewController setShowHints:hint];
+    [passcodeViewController setCancellable:cancellable];
+    [passcodeViewController setHintText:hintText];
 
     return passcodeViewController;
 }

@@ -20,6 +20,7 @@
 @synthesize unlockCode;
 @synthesize passcodeDelegate;
 @synthesize passcodeErrorLabel,passcodeErrorBaseView,passcodeErrorTryAgain,passcodeTitle;
+@synthesize hintText;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -36,14 +37,17 @@
     maxRetries = retries;
 }
 
-- (void)setShowHints:(BOOL)hint
+- (void)setHintText:(NSString *)_hintText
 {
-    [hintKey setHidden:(hint == NO?YES:NO)];
+    showHint = YES;
+    if (_hintText == nil || (_hintText != nil && [_hintText compare:@""] != NSOrderedSame))
+        showHint = NO;
+    hintText = [NSString stringWithString:_hintText];
 }
 
 - (void)setCancellable:(BOOL)canCancel
 {
-    [cancelKey setHidden:(canCancel == NO?YES:NO)];
+    showCancel = canCancel;
 }
 
 - (void)viewDidLoad
@@ -51,6 +55,9 @@
     [super viewDidLoad];
     passcodeDic = [[NSMutableDictionary alloc] initWithObjects:
                    [NSArray arrayWithObjects:@"",@"",@"",@"",nil] forKeys:[NSArray arrayWithObjects:@"1",@"2",@"3",@"4", nil]];
+    tries = 0;
+    showHint = NO;
+    showCancel = YES;
 }
 
 - (void)viewDidUnload
@@ -68,8 +75,12 @@
     fourthDigit.hidden = YES;    
     digitPosition = 0;
     [passcodeErrorBaseView setBackgroundColor:[UIColor clearColor]];
-    passcodeErrorBaseView.hidden = YES;    
+    passcodeErrorBaseView.hidden = YES; 
     
+    [hintKey setHidden:(showHint == NO?YES:NO)];
+    
+    
+    //[cancelKey setHidden:(showHint == NO?YES:NO)];    
     /*
     key0.hidden = YES;
     key1.hidden = YES;
@@ -135,6 +146,9 @@
 }
 -(IBAction)cancelKeyPressed:(id)sender
 {
+    if (showCancel == NO)
+        return;
+        
     firstDigit.hidden = YES;
     secondDigit.hidden = YES;
     thirdDigit.hidden = YES;
@@ -142,17 +156,21 @@
     digitPosition = 0;
     if (passcodeDelegate != nil)
     {
-        [passcodeDelegate passcodeLockWasCancelled];
+        if ([passcodeDelegate respondsToSelector:@selector(passcodeLockWillBeCancelled)])        
+        {
+            [passcodeDelegate passcodeLockWillBeCancelled];
+        }
     }
+    [self dismissModalViewControllerAnimated:YES];
 }
 -(IBAction)hintKeyPressed:(id)sender
 {
-    NSLog(@"hintKeyPressed");
+    if (showHint == NO)
+        return;
 }
 
 -(IBAction)keyPressed:(id)sender
 {
-    NSLog(@"keyPressed: %i",[sender tag]);
     switch (digitPosition) 
     {
         case 0: firstDigit.hidden = NO;
@@ -192,6 +210,7 @@
             }
             else 
             {
+                tries++;
                 if (passcodeDelegate != nil)
                 {
                     if ([passcodeDelegate respondsToSelector:@selector(passcodeFailedToUnlock)])
@@ -199,13 +218,21 @@
                         [passcodeDelegate passcodeFailedToUnlock];
                     }
                 }
-                // unlock error
+                // unlock error            
                 [self performSelector:@selector(showError) withObject:self afterDelay:0.5];
+                
+                if (maxRetries > 0 && tries >= maxRetries)
+                {
+                    if ([passcodeDelegate respondsToSelector:@selector(passcodeFailedWithTooManyAttempts)])
+                    {
+                        [passcodeDelegate passcodeFailedWithTooManyAttempts];
+                    }                    
+                }
             }
         }
         @catch (NSException* e) 
         {
-    
+            NSLog(@"Exception on EAPasscodeLock lib: %@",e);
         }
     }
 }

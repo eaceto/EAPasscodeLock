@@ -12,6 +12,19 @@
 
 @interface EAPasscodeLock : NSObject
 
--(UIViewController*) passcodeViewControllerWithCode:(NSString*)code cancelable:(BOOL)cancelable showHint:(BOOL)hint maxRetries:(int)retries delegate:(id<EAPasscodeLockProtocol>) _passcodeDelegate;
+// Cancellable = YES
+// maxRetries = unlimited
+// show Hint = NO
+-(UIViewController*) passcodeViewControllerWithCode:(NSString*)code delegate:(id<EAPasscodeLockProtocol>) _passcodeDelegate;
+
+// Cancellable = cancellable
+// maxRetries = unlimited
+// show Hint = NO
+-(UIViewController*) passcodeViewControllerWithCode:(NSString*)code cancellable:(BOOL)cancellable delegate:(id<EAPasscodeLockProtocol>) _passcodeDelegate;
+
+// Cancellable = cancellable
+// maxRetrires = retries
+// show Hint only if hintText != nil and not Empty
+-(UIViewController*) passcodeViewControllerWithCode:(NSString*)code cancellable:(BOOL)cancellable hintText:(NSString*)hintText maxRetries:(int)retries delegate:(id<EAPasscodeLockProtocol>) _passcodeDelegate;
 
 @end
